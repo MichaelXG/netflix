@@ -1,95 +1,101 @@
-# 📇 Gerenciador de Contatos
+# 🎬 Netflix Clone
 
-Aplicação web desenvolvida com **React** + **Vite** para gerenciamento de contatos. Permite cadastrar, visualizar, editar e excluir contatos, com armazenamento local no navegador via `localStorage`.
-
-![Preview](./preview.png)
+Um projeto completo de clone da interface da Netflix, desenvolvido com **React**, **TailwindCSS**, **React Router** e consumo da **API do The Movie Database (TMDB)**.
 
 ---
 
-## ✨ Funcionalidades
+## 🚀 Funcionalidades
 
-- ✅ **Adicionar Contatos**  
-  Insira nome, telefone e e-mail de novos contatos.
-
-- 📝 **Editar Contatos**  
-  Atualize informações diretamente da lista de contatos.
-
-- ❌ **Excluir Contatos**  
-  Remova contatos indesejados com um clique.
-
-- 💾 **Persistência de Dados**  
-  Todos os dados são salvos automaticamente no navegador com `localStorage`.
-
-- 🎨 **Visual Moderno e Responsivo**  
-  Interface clara, amigável e adaptada para dispositivos móveis.
+- ✅ Autenticação por nome e avatar (localStorage)
+- ✅ Exibição de filmes e séries populares
+- ✅ Página de detalhes com trailer, elenco, sinopse e produção
+- ✅ Navegação por gêneros
+- ✅ Página "Minha Lista" com favoritos persistentes por usuário
+- ✅ Menu de usuário com logout
+- ✅ Tema escuro/claro (dark mode)
+- ✅ Responsivo para mobile e desktop
+- ✅ Scroll horizontal com carregamento automático (carrossel)
+- ✅ Destaques com trailer (Billboard)
+- ✅ Top 10 de filmes e séries por avaliação
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🛠️ Tecnologias
 
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [CSS Moderno](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- [LocalStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage)
+- **React 18+**
+- **React Router DOM**
+- **TailwindCSS**
+- **Axios**
+- **TMDB API**
+- **LocalStorage** (para persistência de usuário e favoritos)
 
 ---
 
-## 📦 Instalação e Execução
+## 🖼️ Layout
 
-### 1. Clone o repositório
+O layout é inspirado na experiência da interface da Netflix, incluindo:
 
-```bash
-git clone https://github.com/seu-usuario/gerenciador-contatos.git
-cd gerenciador-contatos
-```
+- Navegação lateral responsiva
+- Carrosséis horizontais para filmes/séries
+- Destaques com trailer incorporado
+- Avatares e perfil
+- Menu dropdown ao clicar no avatar
 
-### 2. Instale as dependências com Yarn (ou npm)
+---
 
-```bash
-yarn
-# ou
+## 📦 Instalação
+
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/netflix-clone.git
+   cd netflix-clone
+
+   ```
+
+2. Instale as dependências:
+
 npm install
-```
 
-### 3. Inicie o servidor de desenvolvimento
+3. Configure a variável de ambiente .env:
 
-```bash
-yarn dev
-# ou
+VITE_TMDB_API_KEY=<<SUA_CHAVE_DA_API_TMDB>>
+
+4. Inicie o projeto:
+
 npm run dev
-```
 
-### 4. Acesse no navegador
+## 🔐 Login Simples
+    O login é simulado apenas com nome e avatar, armazenados no localStorage:
 
-```
-http://localhost:5173
-```
+    Nome obrigatório
 
----
+    Avatar opcional (URL de imagem)
 
-## 🗂️ Estrutura do Projeto
+    Após login, o usuário é redirecionado para a home
 
-```
-gerenciador-contatos/
-├── public/
-│   └── vite.svg
-├── src/
-│   ├── components/
-│   │   ├── ContactForm.jsx
-│   │   ├── ContactForm.css
-│   │   ├── ContactList.jsx
-│   │   └── ContactList.css
-│   ├── App.jsx
-│   ├── App.css
-│   ├── main.jsx
-│   └── index.css
-├── index.html
-├── package.json
-└── README.md
-```
+## 📂 Estrutura de Pastas
 
----
+src/
+    ├── api/ # Funções que acessam a API TMDB
+    ├── components/ # Componentes reutilizáveis (MovieCard, Header, etc.)
+    ├── hooks/ # Hooks customizados (useFavorites, etc.)
+    ├── pages/ # Páginas principais
+    ├── utils/ # Utilitários (favoritos, token, etc.)
+    ├── AppWrapper.jsx # Componente principal com rotas
 
-## 🧑‍💻 Autor
+## 📸 Screenshots
 
-Feito com 💙 por **Michael XG**
+- Inclua aqui imagens do app: Home, Detalhes, Login, Favoritos, etc.
+
+## 📌 To-do (melhorias futuras)
+
+- Filtro por país / idioma
+
+- Comentários por usuário
+
+- Integração com Firebase Auth
+
+- Suporte a múltiplos perfis
+
+## 🧑‍💻 Desenvolvido por Michael XG
